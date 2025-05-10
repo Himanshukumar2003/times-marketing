@@ -2,65 +2,101 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product UI Variations</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- Custom CSS -->
-    <style>
-        /* Base Styles */
-        :root {
-            --primary-color: #ff7730;
-            --primary-hover: #e66a2b;
-            --text-color: #333;
-            --light-gray: #f8f9fa;
-            --medium-gray: #e9ecef;
-            --dark-gray: #6c757d;
-            --border-radius: 12px;
-            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us Section Layouts</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Common Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-color);
-        }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-weight: 600;
-        }
+    .about-text {
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
 
-        /* 1. Basic Product Card (Like Example) */
+    .card-hover-1 {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
 
-    </style>
+    .card-hover-1:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img {
+      overflow: hidden;
+    }
+
+    .card-img img {
+      transition: transform 0.5s ease;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-hover-1:hover .card-img img {
+      transform: scale(1.1);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      color: #0099ff;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .card-content h3:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: #0099ff;
+    }
+
+    .card-content ul li {
+      padding: 8px 0;
+      border-bottom: 1px dashed #eee;
+      transition: all 0.3s ease;
+    }
+
+    .card-content ul li:hover {
+      padding-left: 10px;
+      color: #0099ff;
+    }
+
+    .card-content ul li i {
+      color: #0099ff;
+      margin-right: 10px;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container py-5">
-        <h1 class="text-center mb-5">Product UI Variations</h1>
-
-        <!-- Variation 1: Basic Product Card (Like Example) -->
+  <!-- Layout 1: Similar to the reference image with cards -->
 
 
 
 
-    </div>
 
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
