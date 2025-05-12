@@ -7029,6 +7029,10 @@ header.main-header .header-sticky.active {
 	transition: all 0.3s ease;
 }
 
+.card-content ul li a {
+	color: var(--text-color);
+}
+
 .card-content ul li:hover {
 	padding-left: 10px;
 	color: var(--accent-color);

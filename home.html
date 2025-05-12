@@ -310,11 +310,20 @@
                                     <div class="card-content">
                                         <h3 class=" mb-3">Product</h3>
                                         <ul class="list-unstyled">
-                                            <li><i class="fas fa-angle-right"></i> Oil injected air compressors</li>
-                                            <li><i class="fas fa-angle-right"></i> Oil free air compressors</li>
-                                            <li><i class="fas fa-angle-right"></i> Air Dryers</li>
-                                            <li><i class="fas fa-angle-right"></i> Air Filters</li>
-                                            <li><i class="fas fa-angle-right"></i> Blowers</li>
+                                            <li><a href="/home.html#oil-injected-air-compressors"><i
+                                                        class="fas fa-angle-right"></i> Oil injected air compressors</a>
+                                            </li>
+                                            <li><a href="/home.html#oil-free-air-compressors"><i
+                                                        class="fas fa-angle-right"></i>
+                                                    Oil free air compressors</a></li>
+                                            <li><a href="/home.html#air-dryers"><i class="fas fa-angle-right"></i> Air
+                                                    Dryers</a>
+                                            </li>
+                                            <li><a href="/home.html#air-filters"><i class="fas fa-angle-right"></i> Air
+                                                    Filters</a></li>
+                                            <li><a href="/home.html#blowers"><i class="fas fa-angle-right"></i>
+                                                    Blowers</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -371,7 +380,7 @@
             </div>
             <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
 
-                <section class="section bg-light" id="productSection">
+                <section class="section bg-light" id="oil-injected-air-compressors">
                     <div class="container">
                         <div class="section-title">
 
@@ -549,7 +558,7 @@
                 </section>
 
 
-                <section class="section ">
+                <section class="section " id="oil-free-air-compressors">
                     <div class="container">
                         <div class="section-title">
 
@@ -716,7 +725,7 @@
                 </section>
 
 
-                <section class="section bg-light">
+                <section class="section bg-light" id="air-dryers">
                     <div class="container">
                         <div class="section-title">
 
@@ -830,7 +839,7 @@
                     </div>
                 </section>
 
-                <section class="section ">
+                <section class="section " id="air-filters">
                     <div class="container">
                         <div class="section-title">
 
@@ -1105,7 +1114,7 @@
                 </section>
 
 
-                <section class="section bg-light">
+                <section class="section bg-light" id="blowers">
                     <div class="container">
                         <div class="section-title">
 
@@ -2012,10 +2021,28 @@
 </body>
 
 <script>
+    const router = [
+        "#oil-injected-air-compressors",
+        "#oil-free-air-compressors",
+        "#air-dryers",
+        "#air-filters",
+        "#blowers",
+    ];
+
     document.addEventListener("DOMContentLoaded", function () {
-        if (window.location.hash === "home.html#products") {
-            var productTab = new bootstrap.Tab(document.querySelector('#product-tab'));
-            productTab.show();
+        if (router.includes(location.hash)) {
+            // Optional: show tab if needed
+            var tabEl = document.querySelector('#product-tab');
+            if (tabEl) {
+                var productTab = new bootstrap.Tab(tabEl);
+                productTab.show();
+            }
+
+            // Optional: scroll to section
+            const section = document.querySelector(location.hash);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     });
 </script>
