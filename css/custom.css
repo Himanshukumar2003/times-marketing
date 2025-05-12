@@ -748,7 +748,7 @@ header.main-header .header-sticky.active {
 }
 
 .header-social-links ul li a {
-	color: var(--accent-color);
+	color: white;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -1213,13 +1213,20 @@ header.main-header .header-sticky.active {
 	padding: 60px;
 	box-shadow: 0px 4px 30px 0px #0000000A;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 30px 60px;
 }
 
 .services-list-box .service-item {
 	width: calc(25% - 45px);
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .services-list-box .service-item:after {
@@ -1467,7 +1474,7 @@ header.main-header .header-sticky.active {
 	width: calc(50% - 15px);
 	border: 1px solid var(--dark-divider-color);
 	border-radius: 40px;
-	padding: 30px;
+	padding: 20px;
 }
 
 .what-we-do-list-box-1 .what-we-do-item:nth-child(even) {
@@ -2096,6 +2103,10 @@ header.main-header .header-sticky.active {
 
 .testimonial-company-slider {
 	border-top: 1px solid var(--divider-color);
+
+}
+
+.clients {
 	padding-top: 80px;
 	margin-top: 80px;
 }
@@ -2106,7 +2117,6 @@ header.main-header .header-sticky.active {
 
 .testimonial-company-slider .company-logo img {
 	width: 100%;
-	max-height: 40px;
 }
 
 /************************************/
