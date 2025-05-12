@@ -4,222 +4,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Footer 2 - Bootstrap Version</title>
+  <title>Send Enquiry Popup - Design 2</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <!-- Custom CSS -->
   <style>
-    /* Footer Styles */
-    .footer {
-      background: linear-gradient(to right, #212529, #343a40);
-      color: #fff;
-      padding: 3rem 0;
+    body {
+      background-color: #f0f2f5;
+      font-family: 'Arial', sans-serif;
     }
 
-    .footer-top {
-      padding-bottom: 1.5rem;
-      margin-bottom: 2.5rem;
-      border-bottom: 1px solid #495057;
+    .popup-demo {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
     }
 
-    .logo-container {
-      display: flex;
-      align-items: center;
+    .popup-trigger {
+      margin-bottom: 20px;
     }
 
-    .logo-box {
-      background-color: #dc3545;
-      height: 3rem;
-      width: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 0.75rem;
-      border-radius: 0.25rem;
+    .enquiry-popup {
+      border: none;
+      border-radius: 0;
     }
 
-    .logo-text {
-      color: #fff;
-      font-weight: bold;
+    .popup-header {
+      background-color: #1a3c6e;
+      color: white;
+      padding: 20px 25px;
+      border-bottom: 4px solid #ffc107;
+    }
+
+    .popup-header h3 {
+      margin: 0;
+      font-weight: 700;
       font-size: 1.5rem;
-    }
-
-    .company-name {
-      font-weight: bold;
-      font-size: 1.25rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 1px;
     }
 
-    .company-type {
-      color: #adb5bd;
+    .popup-body {
+      padding: 30px;
+      background-color: #f8f9fa;
     }
 
-    .social-icons a {
-      color: #fff;
-      margin-left: 1.25rem;
-      transition: color 0.3s;
+    .form-group {
+      margin-bottom: 20px;
     }
 
-    .social-icons a:hover {
-      color: #adb5bd;
-    }
-
-    .section-title {
-      font-size: 1.125rem;
+    .form-label {
       font-weight: 600;
-      margin-bottom: 1rem;
-      padding-left: 0.75rem;
-      border-left: 4px solid #dc3545;
+      color: #1a3c6e;
+      margin-bottom: 8px;
+      display: block;
     }
 
-    .about-list {
-      color: #adb5bd;
-      padding-left: 0;
-      list-style-type: none;
+    .form-control,
+    .form-select {
+      height: 45px;
+      border: 1px solid #ced4da;
+      border-radius: 0;
+      padding: 10px 15px;
+      font-size: 14px;
     }
 
-    .about-list li {
-      margin-bottom: 0.5rem;
+    .form-control:focus,
+    .form-select:focus {
+      border-color: #1a3c6e;
+      box-shadow: 0 0 0 0.25rem rgba(26, 60, 110, 0.25);
     }
 
-    .logo {
-      width: 250px;
+    textarea.form-control {
+      height: auto;
     }
 
-    .map-container {
-      height: 16rem;
-      border-radius: 0.5rem;
-      overflow: hidden;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    .input-icon {
+      position: relative;
     }
 
-    .map-link {
-      color: #4dabf7;
-      font-size: 0.875rem;
-    }
-
-    .map-link:hover {
-      text-decoration: underline;
-    }
-
-    .contact-icon {
-      color: #dc3545;
-      margin-right: 0.75rem;
-    }
-
-    .office-card {
-      background-color: #343a40;
-      padding: 10px;
-      border-radius: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .office-title {
-      color: #f08c8c;
-      font-weight: 500;
-      margin-bottom: 0.25rem;
-    }
-
-    .office-address {
-      font-size: 0.875rem;
-      color: #adb5bd;
-    }
-
-    .copyright {
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #495057;
-      text-align: center;
-      font-size: 0.875rem;
+    .input-icon i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
       color: #6c757d;
+    }
+
+    .input-icon input,
+    .input-icon select {
+      padding-left: 40px;
+    }
+
+    .required-field::after {
+      content: "*";
+      color: #dc3545;
+      margin-left: 4px;
+    }
+
+    .btn-submit {
+      background-color: #1a3c6e;
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+    }
+
+    .btn-submit:hover {
+      background-color: #15305a;
+    }
+
+    .form-footer {
+      background-color: #e9ecef;
+      padding: 15px 30px;
+      text-align: right;
+      border-top: 1px solid #dee2e6;
+    }
+
+    .close-btn {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      line-height: 1;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+
+    .close-btn:hover {
+      opacity: 1;
     }
   </style>
 </head>
 
 <body>
-  <!-- Main content would go here -->
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enquiryModal2">
+    Open Enquiry Form - Design 2
+  </button>
 
+  <!-- Modal -->
 
-  <!-- Footer -->
-  <footer class="footer py-5 bg-dark text-white">
-    <div class="container">
-      <!-- Top Section -->
-      <div class="footer-top d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
-        <div class="logo-container mb-3 mb-md-0 text-center text-md-start">
-          <img src="images/footer-logo.png" class="logo" alt="Logo" style="max-width: 180px;">
-        </div>
-        <div class="social-icons text-center text-md-end">
-          <a href="#" class="me-3 text-white"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="me-3 text-white"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="me-3 text-white"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <!-- Main Content -->
-      <div class="row    justify-content-between gy-4">
-        <!-- About Us -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <h5 class="section-title">About Us</h5>
-          <p>Times Marketing Private Limited - Authorized Channel Partner of Atlas Copco (India) Ltd., Demag Cranes,
-            Voltas Forklift, KION India Pvt. Ltd., Sulzer Pumps, and Graco INC.</p>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <h5 class="section-title">Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="index.html" class="text-white text-decoration-none d-block py-1">Home</a></li>
-            <li><a href="about.html" class="text-white text-decoration-none d-block py-1">About</a></li>
-            <li><a href="blog.html" class="text-white text-decoration-none d-block py-1">Blogs</a></li>
-            <li><a href="contact.html" class="text-white text-decoration-none d-block py-1">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <!-- Quick Contact -->
-        <div class="col-12 col-md-6 col-lg-3">
-          <h5 class="section-title">Quick Contact</h5>
-          <div class="mb-3 d-flex align-items-start">
-            <i class="fas fa-phone contact-icon me-2 mt-1"></i>
-            <div>
-              <p class="mb-1">0129-4050169</p>
-              <p class="mb-0">011-29942370</p>
-            </div>
-          </div>
-          <div class="d-flex align-items-start">
-            <i class="fas fa-envelope contact-icon me-2 mt-1"></i>
-            <p class="mb-0">info@timesmarketing.com</p>
-          </div>
-        </div>
-
-        <!-- Office Locations -->
-        <div class="col-12 d-flex flex-md-row gap-4 ">
-          <div class="office-card">
-            <strong>Registered Office:</strong>
-            <p class="mb-0">Flat No. 9455, Sector-C, Pocket-9, Vasant Kunj, New Delhi - 110070</p>
-          </div>
-          <div class="office-card mb-3">
-            <strong>Operational Office:</strong>
-            <p class="mb-0">Plot No-2A, Street No-3, Gurukul Industrial Area, Faridabad - 121003, Haryana, India</p>
-          </div>
-          <div class="office-card mb-3">
-            <strong>Branch Office:</strong>
-            <p class="mb-0">K 364 3rd Floor, Sarita Vihar, New Delhi - 110076</p>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Copyright -->
-      <div class="text-center mt-5 border-top pt-3">
-        <small>2023 © Times Marketing Pvt. Ltd. All Rights Reserved. Powered by Mudrak Infotech</small>
-      </div>
-    </div>
-  </footer>
-
+  </div>
 
   <!-- Bootstrap JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
