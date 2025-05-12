@@ -7039,3 +7039,69 @@ header.main-header .header-sticky.active {
 	color: var(--accent-color);
 	margin-right: 10px;
 }
+
+
+
+/*  */
+
+footer .section-title {
+	color: white;
+}
+
+.logo {
+	width: 250px;
+}
+
+.map-container {
+	height: 16rem;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.map-link {
+	color: #4dabf7;
+	font-size: 0.875rem;
+}
+
+.map-link:hover {
+	text-decoration: underline;
+}
+
+.contact-icon {
+	color: var(----accent-color);
+	margin-right: 0.75rem;
+}
+
+.office-card {
+	background-color: #343a40;
+	padding: 10px;
+	border-radius: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.office-title {
+	color: #f08c8c;
+	font-weight: 500;
+	margin-bottom: 0.25rem;
+}
+
+.office-address {
+	font-size: 0.875rem;
+	color: #adb5bd;
+}
+
+.copyright {
+	margin-top: 2.5rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid #495057;
+	text-align: center;
+	font-size: 0.875rem;
+	color: #6c757d;
+}
+
+
+.footer-top {
+	padding-bottom: 40px;
+	border-bottom: 1px solid #495057;
+}
