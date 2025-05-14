@@ -1123,22 +1123,45 @@ header.main-header .header-sticky.active {
 }
 
 .genuine-rating-counter {
-	background: var(--secondary-color);
+	background: var(--accent-color);
 	border-radius: 40px;
 	padding: 50px;
 	text-align: center;
 }
 
+.genuine-rating-counter img {
+	width: 80px;
+	animation: upDown 1.8s ease-in-out infinite;
+
+}
+
+
+
+
+
+
+
+@keyframes upDown {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-15px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+
 .genuine-rating-counter .about-counter {
 	margin-bottom: 5px;
 }
 
-.genuine-rating-counter .about-counter h2 {
-	background: url('../images/genuine-rating-counter-bg.jpg');
-	background-size: cover;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-size: 80px;
+.genuine-rating-counter h2 {
+	color: white;
 	font-weight: 900;
 }
 
@@ -7235,4 +7258,27 @@ textarea.form-control {
 
 .close-btn:hover {
 	opacity: 1;
+}
+
+
+
+.certificates {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	padding: 20px;
+
+	height: 100%;
+	transition: all 0.5s;
+	border: 2px dotted var(--accent-color);
+}
+
+.certificates:hover {
+	transform: translateY(-20px);
+}
+
+.certificates img {
+	max-height: 450px;
+	object-fit: contain;
 }
