@@ -313,7 +313,8 @@
                                     <div class="card-content">
                                         <h3 class=" mb-3">Product</h3>
                                         <ul class="list-unstyled">
-                                            <li><a href="/home.html#oil-injected-air-compressors"><i
+                                            <li role="tabpanel" aria-labelledby="product-tab"><a
+                                                    href="/home.html#oil-injected-air-compressors"><i
                                                         class="fas fa-angle-right"></i> Oil injected air compressors</a>
                                             </li>
                                             <li><a href="/home.html#oil-free-air-compressors"><i
@@ -2019,41 +2020,32 @@
         </div>
     </div>
 </body>
-
 <script>
-    const router = [
-        "#oil-injected-air-compressors",
-        "#oil-free-air-compressors",
-        "#air-dryers",
-        "#air-filters",
-        "#blowers",
-    ];
-
     document.addEventListener("DOMContentLoaded", function () {
         const hash = location.hash;
+        const productHashList = [
+            "#product",
+            "#oil-injected-air-compressors",
+            "#oil-free-air-compressors",
+            "#air-dryers",
+            "#air-filters",
+            "#blowers"
+        ];
 
-        if (router.includes(hash)) {
-            // Check if already reloaded
-            if (!sessionStorage.getItem("reloaded")) {
-                sessionStorage.setItem("reloaded", "true");
-                location.reload();
-            } else {
-                // Show tab
-                var tabEl = document.querySelector('#product-tab');
-                if (tabEl) {
-                    var productTab = new bootstrap.Tab(tabEl);
-                    productTab.show();
-                }
+        if (productHashList.includes(hash)) {
+            const productTabBtn = document.getElementById("product-tab");
+            const productTab = new bootstrap.Tab(productTabBtn);
 
-                // Scroll to section
+            // Activate Product tab
+            productTab.show();
+
+            // Optional: Scroll to the section after a delay
+            setTimeout(() => {
                 const section = document.querySelector(hash);
                 if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
+                    section.scrollIntoView({ behavior: "smooth" });
                 }
-
-                // Clear the reload flag for future use
-                sessionStorage.removeItem("reloaded");
-            }
+            }, 300);
         }
     });
 </script>
